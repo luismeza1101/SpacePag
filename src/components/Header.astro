@@ -1,0 +1,27 @@
+---
+const list: string[] = [
+  "HOME",
+  "DESTINATION",
+  "CREW",
+  "TECHNOLOGY"
+]
+
+---
+
+<header class="absolute right-0 w-full flex items-center justify-between">
+  <picture class="ml-4">
+    <img src="/public/assets/shared/logo.svg" alt="Logo" class="w-[40px]" />
+  </picture>
+  <nav class="backdrop-blur-xl text-sm">
+    <ul
+      class="font-thin flex items-center gap-5 px-5 text-[#fff] text-xs  md:text-xl bg-[#131522]"
+    >
+    {list.map(item => (
+        <li class="flex gap-2 py-8 cursor-pointer border-b-2 border-transparent hover:border-white duration-500">
+        <span class="font-bold hidden md:block">02</span>
+        {item}
+      </li>
+    ))}
+    </ul>
+  </nav>
+</header>
